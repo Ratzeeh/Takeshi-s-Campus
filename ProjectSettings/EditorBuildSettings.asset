@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FINAL (do not touch).unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 8c98c7dd8c261d94a9c608967a62c4af
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 97593de664d93804b9628e0b914fdcf1
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: 0799557e1aeb8b74aaf6d2f23b64b67c
+  - enabled: 1
+    path: Assets/Scenes/IngameUI.unity
+    guid: c89615ba1a023e342b3f1b248078e7cc
   m_configObjects: {}
