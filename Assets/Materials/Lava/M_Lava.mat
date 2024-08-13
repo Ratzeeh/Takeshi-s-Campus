@@ -71,10 +71,10 @@ Material:
     - _Emission_Strength: 1
     - _FlowDirectionX: 0
     - _FlowDirectionY: 1
-    - _FlowSpeed: 0.025
-    - _FresnelPower: 0.5
+    - _FlowSpeed: 0.02
+    - _FresnelPower: 0.9
     - _GlowSpeed: 0.25
-    - _NormalStrength: 1.43
+    - _NormalStrength: 0.95
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
