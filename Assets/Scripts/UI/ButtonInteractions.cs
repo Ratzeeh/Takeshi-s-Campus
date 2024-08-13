@@ -22,27 +22,33 @@ public class ButtonInteractions : MonoBehaviour
 
     public void OnCreditsClick()
     {
+        AudioManager.Instance.PlaySound(new SoundRequest("UIButton"));
+        StartCoroutine(CoCreditsClick());
 
     }
 
     public void OnPlayClick()
     {
+        AudioManager.Instance.PlaySound(new SoundRequest("UIButton"));
 
     }
 
     public void OnQuitClick()
     {
-
+        AudioManager.Instance.PlaySound(new SoundRequest("UIButton"));
+        Application.Quit();
     }
 
     public void OnBackFromSettingsClick()
     {
-
+        AudioManager.Instance.PlaySound(new SoundRequest("UIButton"));
+        StartCoroutine(CoBackFromSettingsClick());
     }
 
     public void OnBackFromCreditsClick()
     {
-
+        AudioManager.Instance.PlaySound(new SoundRequest("UIButton"));
+        StartCoroutine(CoBackFromCreditsClick());
     }
 
     public IEnumerator CoSettingsClick()
@@ -50,5 +56,26 @@ public class ButtonInteractions : MonoBehaviour
         yield return new WaitForSeconds(1);
         SceneManager.LoadSceneAsync("Settings");
         SceneManager.UnloadSceneAsync("MainMenu");
+    }
+
+    public IEnumerator CoBackFromSettingsClick()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("MainMenu");
+        SceneManager.UnloadSceneAsync("Settings");
+    }
+
+    public IEnumerator CoCreditsClick()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadSceneAsync("Credits");
+        SceneManager.UnloadSceneAsync("MainMenu");
+    }
+
+    public IEnumerator CoBackFromCreditsClick()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadSceneAsync("MainMenu");
+        SceneManager.UnloadSceneAsync("Credits");
     }
 }
