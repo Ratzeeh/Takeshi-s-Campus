@@ -17,7 +17,7 @@ public class PlatformRow : MonoBehaviour
             platform.SetToggleState(false);
     }
 
-    private void Start()
+    private void OnEnable()
     {
         StartCoroutine(ToggleFakePlatforms());
     }
@@ -32,21 +32,27 @@ public class PlatformRow : MonoBehaviour
         if (_fakePlatformCount > 0)
         {
 
-            List<IAmToggleable> realPlatforms = new();
+            //List<IAmToggleable> realPlatforms = new();
 
-            foreach (var platform in _platforms)
-            {
-                if (platform is FakePlatform)
-                    realPlatforms.Add(platform);
-            }
+            //foreach (var platform in _platforms)
+            //{
+            //    if (platform is FakePlatform)
+            //        realPlatforms.Add(platform);
+            //}
 
             int rnd;
 
             for (int i = 0; i < _fakePlatformCount; i++)
             {
-                rnd = Random.Range(0, realPlatforms.Count - 1);
+                do
+                {
+                    //rnd = Random.Range(0, realPlatforms.Count);
+                    rnd = Random.Range(0, _platforms.Length);
+
+                } while (_platforms[rnd].IsActive);
+
                 _platforms[rnd].SetToggleState(true);
-                realPlatforms.RemoveAt(rnd);
+                //realPlatforms.RemoveAt(rnd);
             }
         }
     }
