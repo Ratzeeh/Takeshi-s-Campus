@@ -41,7 +41,6 @@ public class PlayerController : MonoBehaviour
 
         Vector3 gravity = globalGravity * gravityScale * Vector3.up;
         rb3D.AddForce(gravity, ForceMode.Acceleration);
-
     }
 
     public void MovePlayer(InputAction.CallbackContext context)
