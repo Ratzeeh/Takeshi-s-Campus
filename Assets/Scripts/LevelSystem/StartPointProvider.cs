@@ -24,7 +24,8 @@ public class StartPointProvider : MonoBehaviour
     void Start()
     {
         m_startPointTransform = this.transform;
-        playerPrefab.transform.position = this.transform.position;
+        Instantiate(playerPrefab, this.transform.position, Quaternion.identity);
+        
     }
 
 }
