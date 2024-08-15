@@ -74,7 +74,7 @@ Material:
     - _FlowSpeed: 0.02
     - _FresnelPower: 0.9
     - _GlowSpeed: 0.25
-    - _NormalStrength: 0.95
+    - _NormalStrength: 2.5
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
